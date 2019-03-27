@@ -1,0 +1,56 @@
+h1{
+  text-align: center;
+}
+
+.input-container{
+  width: 400px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid black;
+}
+.output-container{
+  width: 300px;
+  border: 2px solid black;
+  margin: 30px;
+  padding-bottom: 20px
+}
+
+.sub-section, .totals{
+  margin-left: 20px;
+  display: flex;
+}
+
+.info{
+  display: block;
+  margin-top: 7px;
+  text-align: right;
+}
+
+form{
+  width: 500px;
+}
+
+input[type="number"]{
+  width: 100px;
+}
+
+.output-values, .total-value{
+  padding-left: 10px;
+}
+
+.total-label, .charge-labels{
+  width: 58px;
+}
+
+.totals{
+  margin-top: 5px;
+  width: 120px;
+  border-top: 1px solid black;
+}

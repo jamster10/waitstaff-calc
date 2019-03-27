@@ -1,0 +1,87 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Waitstaff Calculator</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="An App to Calculate Waitstaff earnings">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header role="banner">
+  <h1>Waitstaff Calculator</h1>
+</header>
+<main role="main">
+  <div class="input-container">
+    <h2>Enter the Meal Details</h2>
+    <div class="meal-details sub-section">
+      <form>
+        <label for="meal-price">Base Meal Price: $</label>
+        <input type="number" name="meal-price" id="meal-price" placeholder="10.00" min="0">
+        <br>
+        <label for="tax-rate">Tax Rate: %</label>
+        <input type="number" name="tax-rate" id="tax-rate" value="8" min="0">
+        <br>  
+        <label for="tip-percentage">Tip Percentage: %</label>
+        <input type="number" name="tip-percentage" id="tip-percentage" value="5" min="0">
+        <br>  
+        <button type="submit" class="submit-button button">Submit</button>
+        <button type="reset" class="cancel-button button">Cancel</button>
+      </form>
+    </div>
+
+  </div>
+  <div class="both-output-containers">
+    <div class="charges-container output-container">
+      <h2>Customer Charges</h2>
+      <div class="sub-section">
+        <div class="charge-labels">
+          <span class="subtotal info">Subtotal:</span>
+          <span class="tip info">Tip:</span>
+        </div>
+        <div class="output-values">
+            <span class="subtotal info">450.23</span>
+            <span class="tip info">376.11</span>
+        </div>
+      </div>
+      <div class="totals">
+          <span class="total-label info">Totals:</span>
+          <span class="total-value info">11000</span>
+      </div>
+    </div>
+
+    <div class="output-container">
+      <h2>My Earnings Info</h2>
+      <div class="sub-section">
+        <div class="output-labels">
+          <span class="tip-total info">Tip Total:</span>
+          <span class="meal-count info">Meal Count:</span>
+          <span class="tip-per-meal info">Average Tip Per Meal:</span>
+        </div>
+        <div class="output-values">
+            <span class="info">0.00</span>
+            <span class="info">0</span>
+            <span class="tip-per-meal info">0.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="button" value="RESET"> 
+
+
+</main>
+
+
+
+
+
+
+
+
+</body>
+</html>
