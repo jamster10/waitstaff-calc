@@ -1,11 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+
 h1{
   text-align: center;
+  width: 380px;
 }
 
 .input-container{
-  width: 400px;
+  width: 300px;
   border: 2px solid black;
   margin: 30px;
+  padding-bottom: 20px;
 }
 
 h2{
@@ -16,7 +22,7 @@ h2{
   border-bottom: 2px solid black;
 }
 .output-container{
-  width: 300px;
+  width: 240px;
   border: 2px solid black;
   margin: 30px;
   padding-bottom: 20px
@@ -34,11 +40,18 @@ h2{
 }
 
 form{
-  width: 500px;
+  width: 300px;
 }
 
 input[type="number"]{
-  width: 100px;
+  width: 80px; 
+  margin-bottom: 15px;
+}
+label{
+  display: block;
+  margin-bottom: 0px;
+  padding: 0px;
+  text-align: right;
 }
 
 .output-values, .total-value{
@@ -53,4 +66,39 @@ input[type="number"]{
   margin-top: 5px;
   width: 120px;
   border-top: 1px solid black;
+}
+
+.input-labels{
+  text-align: right;
+  margin-top: 5px;
+}
+.input-values{
+  margin-top: 5px;
+}
+
+.btn-controls{
+  width: 150px;
+  margin:auto;
+  margin-top: 20px;
+}
+
+.reset-btn{
+  position: absolute;
+  left: 100px;
+}
+
+@media (min-width: 650px){
+
+  h1{
+    width: 700px;
+  }
+  .both-output-containers{
+    position: absolute;
+    top: 58px;
+    left: 350px;
+  }
+  .reset-btn{
+    left: 630px;
+    top: 430px;
+  }
 }
