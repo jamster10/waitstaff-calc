@@ -74,9 +74,9 @@ function calculateCharges(baseMeal, taxRate, tipPercentage){
 
 function updateState (tipAddendum, subTotal){
   STORE.earnings.mealCount++;
-  STORE.earnings.tipTotal += tipAddendum;
-  STORE.charges.subtotal = subTotal;
-  STORE.charges.tip = tipAddendum; 
+  STORE.earnings.tipTotal += tipAddendum.toFixed(2);
+  STORE.charges.subtotal = subTotal.toFixed(2);
+  STORE.charges.tip = tipAddendum.toFixed(2); 
   renderCalc();
 }
 
