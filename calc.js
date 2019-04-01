@@ -1,5 +1,5 @@
 'use strict';
-
+/* global $*/
 
 //Based on given info, there isnt a need to track every meal, just running totals
 //As such meal details do not need to be stored.
@@ -43,9 +43,9 @@ function renderCalc(){
 function pullDataAndCalculate (store) {
   const {tipTotal, mealCount} = store.earnings;
   const {subtotal, tip} = store.charges;
-  const avgTip = tipTotal === 0 ? 0 : +(tipTotal / mealCount).toFixed(2);
+  const avgTip = tipTotal === 0 ? 0 : (tipTotal / mealCount).toFixed(2);
   const total = (subtotal + tip).toFixed(2);
-
+ 
   return { tipTotal, mealCount, avgTip, subtotal, tip, total };
 }
 
@@ -56,6 +56,7 @@ function addNewMeal (){
     const taxRate = +$('#tax-rate').val();
     const tipPercentage = +$('#tip-percentage').val();
 
+  
     calculateCharges(baseMeal, taxRate, tipPercentage);
 
     $('#meal-price').val('');
@@ -69,14 +70,13 @@ function calculateCharges(baseMeal, taxRate, tipPercentage){
   const taxValue = +(baseMeal * taxRate / 100).toFixed(2);
   const subTotal = +(baseMeal + taxValue);
   updateState(tipValue, subTotal);
-
 }
 
 function updateState (tipAddendum, subTotal){
   STORE.earnings.mealCount++;
-  STORE.earnings.tipTotal += tipAddendum.toFixed(2);
-  STORE.charges.subtotal = subTotal.toFixed(2);
-  STORE.charges.tip = tipAddendum.toFixed(2); 
+  STORE.earnings.tipTotal += Number(tipAddendum.toFixed(2));
+  STORE.charges.subtotal = Number(subTotal.toFixed(2));
+  STORE.charges.tip = Number(tipAddendum.toFixed(2)); 
   renderCalc();
 }
 
